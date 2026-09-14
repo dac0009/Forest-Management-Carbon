@@ -1,0 +1,4 @@
+watershed,treatment,harvest_notes,soil_sampling,tree_inventory
+WS2,Diameter-limit,"Diameter-limit (LAMP): all trees >= 43 cm (17 in) cut; 15-yr cycle in WS2A (SI 80), 20-yr in WS2B (SI 60). Schuler 2014",July 2022; 6 plots x 3 subplots x 3 depths,0.1-ac USFS permanent growth plots; DBH in inches; stems >= 1.0 in
+WS4,Reference,Unmanaged reference since 1903-1911 railroad logging; WS4A/B/C = SI 80/70/60. Schuler 2014,July 2022; 6 plots x 3 subplots x 3 depths,0.1-ac USFS permanent growth plots; DBH in inches; stems >= 1.0 in
+WS5,Single-tree selection,"Single-tree selection (LAMP, BDq Q=1.3): WS5A SI 80, 10-yr cycle; WS5B SI 60, 15-yr cycle. Schuler 2014",July 2022; 6 plots x 3 subplots x 3 depths,0.1-ac USFS permanent growth plots; DBH in inches; stems >= 1.0 in

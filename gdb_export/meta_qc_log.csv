@@ -1,0 +1,28 @@
+dataset,issue,status
+trees,'WS4-A-11' = 9 untagged stems of plot WS4A-11 entered under a variant label; merged,confirmed by DC 2026-09-11
+trees,"DBH in inches; legacy agb column treated DBH as cm (kept as agb_kg_legacy_cm_assumed, do not use)",confirmed by DC 2026-09-11
+trees,"Plot size 0.1 ac (404.7 m2, r = 11.35 m), USFS permanent growth-plot standard",confirmed by DC 2026-09-11
+trees,"9 stems lack DBH (kept, flagged); mycorrhizal type assigned at genus level",
+plots_study,WS5-6 Scomp_name stored as ' WS5' (leading space) in dc_growth_plots.shp; normalized,fix in source shapefile
+plots_study,"WS4B-1, WS4C-1, WS5-6 have no USFS point; field GPS used",offsets 108-201 m
+ref layers,"Shapefile attributes (C_gm2, N_gm2, LF_C, Size_ac, Plot_type) were unfinished manual edits by DC; removed",resolved 2026-09-11
+soil_samples,"Subplots A-C lie 5-15 ft from plot center, inside the 0.1-ac footprint; no subplot coordinates",footprint values represent soil locations
+soil_samples,Soil plots (7-24) not linked to plot_id (DC decision),soil analyzed at watershed/treatment level
+soil_samples,Bulk density from one core per plot x depth,applied to all subplots
+soil_fractions,Fractions are plot composites stored on subplot A rows in source,
+excluded,"DC_Fernow_Data.xlsx = different design (0-100 cm pit, no plot IDs)",not study data
+excluded,Fernow_pH2023.csv = WS3/WS7 acidification study,not study watersheds
+ssurgo_plot,Current SSURGO map units (by coordinate) may differ from NRCS 2008 units in plot_site; both retained,
+ssurgo_plot,"Mapped slope classes disagree with lidar slope at some plots (e.g., WS5-3 mapped 8-15%, lidar ~36%)",use lidar for slope
+plots_study,Subcompartment assigned from mapped boundaries (subcompartments.shp): WS5-6 = WS5B,resolved 2026-09-11
+ref_ten_four_project_plots,"Latitude/Longitude attributes are not coordinates (e.g., 10, 77); geometry CRS 'assumed'",not used
+ref_ws4biomass,Biomass units and year not in file; likely WS4 biomass survey 1990/1993 (WVU Fernow LTREB data page),OPEN: confirm units
+ref_ws4_soils_1997,Suffix 0/1 = two sampling depths; depth definitions not in file,OPEN: confirm depths (metadata)
+plots_study,WS4B-1 and WS4C-1 GPS locations lie 0.3 m from LTREB plots GP4B-1 and GP4C-1,locations independently corroborated
+plot_disturbance,Skid trails cross the footprints of WS2A-3 and WS5-4; context for bulk density only,"stored, not modeled"
+ref_potential_natural_vegetation,Layer does not cover WS2 (99% unclassified),not usable for watershed comparisons
+plot_history_geology,WS2B-2 falls on channel-way alluvium; all other plots on cobble-boulder diamict veneer,
+ref_ws4biomass,Grid mean 321 (range 106-595); consistent with corrected reference AGB if units are Mg/ha,OPEN: confirm units
+plot_canopy,"Lidar delivered in NAD83(2011) Conus Albers (EPSG 6350), not UTM 17N; ArcGIS LAS tools returned empty rasters on this install, so metrics computed directly from the point cloud with laspy",resolved
+plot_canopy,"Flown leaf-off (Nov 2018-May 2019): height metrics reliable; frac_ge5m/ge20m biased low, use as relative measures only",documented
+plot_canopy,Lidar predates the 2022 inventory by 3-4 yr; canopy ranking (WS4 >> WS2 ~ WS5) matches inventory max-DBH and AGB ranking,independent corroboration

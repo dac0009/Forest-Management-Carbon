@@ -1,0 +1,27 @@
+genus,species,common_name,jenkins_group,myc_type,n_stems
+Acer,pennsylvanicum,Striped Maple,soft maple/birch,AM,35
+Acer,rubrum,Red Maple,soft maple/birch,AM,54
+Acer,saccharum,Sugar Maple,hard maple/oak/hickory/beech,AM,149
+Amelanchier,arborea,Serviceberry,mixed hardwood,AM,8
+Aralia,spinosa,Devil's Walking Stick,mixed hardwood,AM,2
+Asimina,triloba,Pawpaw,mixed hardwood,AM,1
+Betula,lenta,Sweet Birch,soft maple/birch,ECM,74
+Carya,cordiformis,Bitternut Hickory,hard maple/oak/hickory/beech,ECM,1
+Carya,glabra,Pignut Hickory,hard maple/oak/hickory/beech,ECM,1
+Castenea,dentata,American Chestnut,mixed hardwood,uncertain,1
+Cornus,florida,Flowering Dogwood,mixed hardwood,AM,1
+Fagus,grandifolia,American Beech,hard maple/oak/hickory/beech,ECM,230
+Fraxinus,americana,White Ash,mixed hardwood,AM,4
+Hamamelis,virginiana,Witch Hazel,mixed hardwood,uncertain,11
+Liriodendron,tulipifera,Yellow-poplar,mixed hardwood,AM,30
+Magnolia,acuminata,Cucumbertree,mixed hardwood,AM,8
+Magnolia,fraseri,Fraser Magnolia,mixed hardwood,AM,31
+Nyssa,sylvativa,Blackgum,mixed hardwood,AM,3
+Ostrya,virginiana,Eastern Hophornbeam,mixed hardwood,ECM,3
+Prunus,serotina,Black Cherry,mixed hardwood,AM,21
+Quercus,alba,White Oak,hard maple/oak/hickory/beech,ECM,5
+Quercus,montana,Chestnut Oak,hard maple/oak/hickory/beech,ECM,5
+Quercus,rubra,Northern Red Oak,hard maple/oak/hickory/beech,ECM,19
+Quercus,velutina,Black Oak,hard maple/oak/hickory/beech,ECM,5
+Tilia,americana,American Basswood,mixed hardwood,ECM,9
+Ulmus,americana,American Elm,mixed hardwood,AM,1

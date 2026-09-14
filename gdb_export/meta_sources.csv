@@ -1,0 +1,11 @@
+dataset,source,notes
+plots_study,"USFS growth-plot locations (15) + DC field GPS (WS4B-1, WS4C-1, WS5-6)",shapefile attributes were draft edits; not used
+trees,DC tree inventory -> fernow_trees_WS2_WS4_WS5.csv,0.1-ac plots; DBH in inches; Jenkins et al. 2003 biomass
+soil_samples / soil_fractions,"Cifelli_Fernow.xlsx, sheet Used_Data (authoritative)",July 2022; CASIF elemental analysis
+plot_terrain / terrain_*,Tucker County 2021 1-m lidar DEM mosaic,aggregated to 5 m; footprint r = 11.35 m
+ref_elt_phase / ref_land_type_assoc,FEF shapefiles (USFS),ecological land type phases
+ref_soil_series / ref_soil_map_units,NRCS 2008 soil survey (FEF shapefiles),map units carry MUKEY
+ref_streams / ref_watersheds / ref_fernow_boundary,FEF shapefiles,
+ssurgo_plot / ssurgo_horizons / ssurgo_restrictions,"USDA-NRCS SSURGO via Soil Data Access, queried by plot coordinate (2026-09-11)","mapped estimates; 0-20 and 20-40 cm depth-weighted, component-%-weighted; 3 distinct profiles (Calvin, Dekalb, Ernest)"
+terrain_solar_kwh / plot_solar,ArcGIS Area Solar Radiation on 5-m lidar DEM,"whole year, 14-day / 0.5-h intervals, 32 directions; horizon shading limited to DEM extent (watersheds + 300 m)"
+plot_canopy,"USGS 3DEP WV_FEMAHQ_2018_D18 (flown 2018-11-08 to 2019-05-01), 84.7 M points, NAD83(2011) Conus Albers (EPSG 6350), heights in metres","per-plot from point cloud via laspy: ground = median class-2 elevation in footprint; heights = first returns above ground, 0-55 m"

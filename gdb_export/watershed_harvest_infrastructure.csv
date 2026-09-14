@@ -1,0 +1,10 @@
+watershed,feature,n_pieces,total_m_or_m2,per_ha
+WS4,skid_trail,1,3.2,0.08
+WS2,skid_trail,6,1644.0,105.23
+WS5,skid_trail,39,3972.6,105.83
+WS4,truck_road,4,1176.1,30.15
+WS2,truck_road,0,0.0,0.0
+WS5,truck_road,2,403.4,10.75
+WS4,log_deck,0,0.0,0.0
+WS2,log_deck,0,0.0,0.0
+WS5,log_deck,3,1502.8,40.03
