@@ -68,14 +68,32 @@ def welch_anova(groups):
     return F, float(stats.f.sf(F, k - 1, df2))
 
 
+def dunnett_mc(groups, n_sim=400_000, seed=12345):
+    """Dunnett's many-to-one test (two-sided) vs groups[0], by Monte Carlo integration of the
+    multivariate t distribution. Identical in definition to scipy.stats.dunnett (SciPy >= 1.11);
+    Monte Carlo error on p is ~0.0005 at p = 0.05 with the default n_sim. Works on any SciPy version."""
+    groups = [np.asarray(g, float) for g in groups]
+    n = np.array([len(g) for g in groups], float)
+    k = len(groups); df = int(n.sum() - k)
+    sp2 = sum(((g - g.mean()) ** 2).sum() for g in groups) / df
+    t_obs = np.array([(g.mean() - groups[0].mean()) / np.sqrt(sp2 * (1 / len(g) + 1 / n[0])) for g in groups[1:]])
+    lam = np.sqrt(n[1:] / (n[1:] + n[0]))
+    R = np.outer(lam, lam); np.fill_diagonal(R, 1.0)
+    rng = np.random.default_rng(seed)
+    Z = rng.multivariate_normal(np.zeros(k - 1), R, size=n_sim)
+    V = np.sqrt(rng.chisquare(df, size=n_sim) / df)
+    tmax = np.abs(Z / V[:, None]).max(axis=1)
+    return [float((tmax >= abs(t)).mean()) for t in t_obs]
+
+
 def dunnett_vs_control(groups):
-    """Dunnett vs groups[0]. SciPy >= 1.11 native; else Welch-t + Holm fallback (labelled)."""
+    """Dunnett vs groups[0]: SciPy's exact version when available (>= 1.11), otherwise the
+    Monte Carlo implementation above (same test, not a substitute test)."""
     try:
         from scipy.stats import dunnett as _d
         return list(_d(*groups[1:], control=groups[0]).pvalue), 'Dunnett'
     except ImportError:
-        p = np.array([stats.ttest_ind(g, groups[0], equal_var=False).pvalue for g in groups[1:]])
-        return list(holm(p)), 'Welch-t+Holm (fallback)'
+        return dunnett_mc(groups), 'Dunnett (Monte Carlo)'
 
 
 def holm(p):
